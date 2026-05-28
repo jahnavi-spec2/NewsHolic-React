@@ -1,15 +1,13 @@
 import React, { Component } from 'react'
 
 export class NewsItem extends Component {
-  constructor(){
-    super();
-  }
+ 
   render() {
-    let {title,description,imageUrl,newsUrl}= this.props;
+    let {title,description,imageUrl,newsUrl, pageSize}= this.props;
     return (
       <div className="my-3">
-      <div className="card" style={{ width: '18rem' }}>
-  <img src={imageUrl} className="card-img-top" alt="..."/>
+      <div className="card" >
+  <img src={imageUrl? imageUrl : "https://via.placeholder.com/300"} className="card-img-top" alt="..."/>
   <div className="card-body">
     <h5 className="card-title">{title}</h5>
     <p className="card-text">{description}</p>
